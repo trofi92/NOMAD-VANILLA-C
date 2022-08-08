@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Nomad Casino!</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+    <h2>
+      Generate a number between 0 and
+      <input
+        id="macNum"
+        onchange="machineNumber()"
+        required
+        type="number"
+        min="0"
+        pattern="[0-9]+"
+      />
+    </h2>
+    <h3 style="display: flex">
+      Guess the number:
+      <input
+        id="userNum"
+        onchange="userNumber()"
+        required
+        type="number"
+        min="0"
+        pattern="[0-9]+"
+      />
+      <button>play!</button>
+    </h3>
+    <div style="display: flex">
+      <div id="userChosen"></div>
+      <div id="macChosen" class="deliver"></div>
+    </div>
+    <b id="resultA"></b>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
