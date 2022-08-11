@@ -25,11 +25,14 @@ const body = document.querySelector("body");
 const newArray = [...colors.keys()];
 
 button.addEventListener("click", function () {
-  const getIndexA = colors[Math.floor(Math.random() * newArray.length)];
-  const getIndexB = colors[Math.floor(Math.random() * newArray.length)];  
+  let getIndexA = colors[Math.floor(Math.random() * newArray.length)];
+  let getIndexB = colors[Math.floor(Math.random() * newArray.length)];  
 
-  if (getIndexA != getIndexB)
+  if (getIndexA !== getIndexB)
   { body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})` }
-  else{body.style.background = "linear-gradient(#e66465, #9198e5)" }
+  else {
+    getIndexA = colors[Math.floor(Math.random() * newArray.length)*0.5];
+    body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})`
+  }
 
 })
