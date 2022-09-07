@@ -16,9 +16,8 @@ const colors = [
   "#485460",
   "#ffa801",
   "#ffd32a",
-  "#ff3f34"
+  "#ff3f34",
 ];
-
 
 const button = document.querySelector("button");
 const body = document.querySelector("body");
@@ -26,13 +25,13 @@ const newArray = [...colors.keys()];
 
 button.addEventListener("click", function () {
   let getIndexA = colors[Math.floor(Math.random() * newArray.length)];
-  let getIndexB = colors[Math.floor(Math.random() * newArray.length)];  
+  let getIndexB = colors[Math.floor(Math.random() * newArray.length)];
 
-  if (getIndexA !== getIndexB)
-  { body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})` }
-  else {
-    getIndexA = colors[Math.floor(Math.random() * newArray.length)*0.5];
-    body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})`
+  if (getIndexA !== getIndexB) {
+    body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})`;
+  } else {
+    getIndexA =
+      colors[Math.floor(Math.random() * newArray.length) * 0.5];
+    body.style.background = `linear-gradient(${getIndexA}, ${getIndexB})`;
   }
-
-})
+});
